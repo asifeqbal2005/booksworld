@@ -116,3 +116,8 @@ D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.cspro
 D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.csproj.CoreCompileInputs.cache
 D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.dll
 D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.pdb
+H:\Projects\BooksWorld\booksworld\BusinessEntities\bin\Debug\BusinessEntities.dll
+H:\Projects\BooksWorld\booksworld\BusinessEntities\bin\Debug\BusinessEntities.pdb
+H:\Projects\BooksWorld\booksworld\BusinessEntities\obj\Debug\BusinessEntities.csproj.CoreCompileInputs.cache
+H:\Projects\BooksWorld\booksworld\BusinessEntities\obj\Debug\BusinessEntities.dll
+H:\Projects\BooksWorld\booksworld\BusinessEntities\obj\Debug\BusinessEntities.pdb

@@ -294,3 +294,17 @@ D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.csproj.AssemblyReference.
 D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.csproj.CoreCompileInputs.cache
 D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.dll
 D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.pdb
+H:\Projects\BooksWorld\booksworld\strutt\obj\Debug\strutt.csproj.AssemblyReference.cache
+H:\Projects\BooksWorld\booksworld\strutt\obj\Debug\strutt.csproj.CoreCompileInputs.cache
+H:\Projects\BooksWorld\booksworld\strutt\bin\strutt.dll.config
+H:\Projects\BooksWorld\booksworld\strutt\bin\strutt.dll
+H:\Projects\BooksWorld\booksworld\strutt\bin\strutt.pdb
+H:\Projects\BooksWorld\booksworld\strutt\bin\BLL.dll
+H:\Projects\BooksWorld\booksworld\strutt\bin\BusinessEntities.dll
+H:\Projects\BooksWorld\booksworld\strutt\bin\DAL.dll
+H:\Projects\BooksWorld\booksworld\strutt\bin\BLL.pdb
+H:\Projects\BooksWorld\booksworld\strutt\bin\BusinessEntities.pdb
+H:\Projects\BooksWorld\booksworld\strutt\bin\DAL.pdb
+H:\Projects\BooksWorld\booksworld\strutt\obj\Debug\strutt.csproj.CopyComplete
+H:\Projects\BooksWorld\booksworld\strutt\obj\Debug\strutt.dll
+H:\Projects\BooksWorld\booksworld\strutt\obj\Debug\strutt.pdb
