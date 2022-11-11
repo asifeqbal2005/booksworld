@@ -343,3 +343,14 @@ D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.dll
 D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.pdb
+H:\Projects\BooksWorld\booksworld\BLL\bin\Debug\BLL.dll
+H:\Projects\BooksWorld\booksworld\BLL\bin\Debug\BLL.pdb
+H:\Projects\BooksWorld\booksworld\BLL\bin\Debug\BusinessEntities.dll
+H:\Projects\BooksWorld\booksworld\BLL\bin\Debug\DAL.dll
+H:\Projects\BooksWorld\booksworld\BLL\bin\Debug\BusinessEntities.pdb
+H:\Projects\BooksWorld\booksworld\BLL\bin\Debug\DAL.pdb
+H:\Projects\BooksWorld\booksworld\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+H:\Projects\BooksWorld\booksworld\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+H:\Projects\BooksWorld\booksworld\BLL\obj\Debug\BLL.csproj.CopyComplete
+H:\Projects\BooksWorld\booksworld\BLL\obj\Debug\BLL.dll
+H:\Projects\BooksWorld\booksworld\BLL\obj\Debug\BLL.pdb

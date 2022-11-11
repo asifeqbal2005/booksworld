@@ -269,3 +269,12 @@ D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.dll
 D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.pdb
+H:\Projects\BooksWorld\booksworld\DAL\bin\Debug\DAL.dll
+H:\Projects\BooksWorld\booksworld\DAL\bin\Debug\DAL.pdb
+H:\Projects\BooksWorld\booksworld\DAL\bin\Debug\BusinessEntities.dll
+H:\Projects\BooksWorld\booksworld\DAL\bin\Debug\BusinessEntities.pdb
+H:\Projects\BooksWorld\booksworld\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+H:\Projects\BooksWorld\booksworld\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+H:\Projects\BooksWorld\booksworld\DAL\obj\Debug\DAL.csproj.CopyComplete
+H:\Projects\BooksWorld\booksworld\DAL\obj\Debug\DAL.dll
+H:\Projects\BooksWorld\booksworld\DAL\obj\Debug\DAL.pdb

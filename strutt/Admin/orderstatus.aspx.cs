@@ -524,8 +524,7 @@ namespace strutt.Admin
             {
                 //this.bindConfirmMail();
                 // Send Email when Confirmed as per Vishesh said on 20-Apr-2019
-                success pageSuccess = new success();
-                pageSuccess.SendEmailConfirmOrder(paymentType, ordId);
+                this.SendEmailConfirmOrder(paymentType, ordId);
 
                 Flag = 1;
             }
@@ -1385,8 +1384,8 @@ namespace strutt.Admin
                 }
                 else if (OrderStatus == "Confirmed")
                 {
-                    success pageSuccess = new success();
-                    pageSuccess.SendEmailConfirmOrder(paymentType, ordId);
+                    //success pageSuccess = new success();
+                    this.SendEmailConfirmOrder(paymentType, ordId);
 
                     Flag = 1;
                 }
@@ -1624,6 +1623,291 @@ namespace strutt.Admin
             {
                 pnl_customMonth.Visible = false;
             }
+        }
+
+        private bool SendEmailConfirmOrder(string paymentType, int OrderNumber)
+        {
+            string ordPrifix = "STR10001";
+
+            string PaymentMehtod = null;
+            string msgbody = "";
+
+            switch (paymentType)
+            {
+                //case "mobokwik":
+                //    PaymentMehtod = "Online - MobiKwik";
+                //    break;
+
+                case "Razorpay":
+                    PaymentMehtod = "Online - Razorpay";
+                    break;
+
+                case "PayUMoney":
+                    PaymentMehtod = "Online - PayUMoney";
+                    break;
+
+                case "CCAvenue":
+                    PaymentMehtod = "Online - CCAvenue";
+                    break;
+
+                case "COD":
+                    PaymentMehtod = "Cash on Delivery";
+                    break;
+
+                    //default:
+                    //    PaymentMehtod = "Cash on Delivery";
+                    //    break;
+            }
+
+            string imgThumb, ProductUrl;
+
+            order_handler orderHandler = new order_handler();
+            DataSet ds = new DataSet();
+            double TotalPrice = 0;
+            ds = orderHandler.get_order_search(OrderNumber, null);
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                DataTable dtCart = ds.Tables[0];
+                TotalPrice = Convert.ToDouble(dtCart.Rows[0]["total_price"].ToString());       // Actual price (Total price + shipping - all discount)
+                ViewState["CustomerName"] = dtCart.Rows[0]["customer_name"];
+                ViewState["ContactNumber"] = dtCart.Rows[0]["contact_number"].ToString();
+                //double subtotal = Convert.ToDouble(dtCart.Rows[0]["quantity"]) * Convert.ToDouble(dtCart.Rows[0]["sale_price"]);
+                string siteurl = System.Configuration.ConfigurationManager.AppSettings["siteUrl"] + "/assets/images/logo/logo.png";
+                //double discount = Convert.ToDouble(dt.Rows[0]["discount"].ToString());
+                string vieworderUrl = System.Configuration.ConfigurationManager.AppSettings["siteUrl"] + @"/account/orderhistory.aspx";
+                string invoiceurl = System.Configuration.ConfigurationManager.AppSettings["siteUrl"] + @"/account/invoice.aspx?id=" + BusinessEntities.security.Encryptdata(dtCart.Rows[0]["order_id"].ToString());
+                msgbody = @"<table style='width:560px;text-align:left;border-spacing:0;border-collapse:collapse;margin:0 auto'>
+                    <tbody>
+                        <tr>
+                            <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding-bottom:40px;border:0'>
+                                <center>
+                                    <table style='width:560px;text-align:left;border-spacing:0;border-collapse:collapse;margin:0 auto'>
+                                        <tbody>
+                                            <tr>
+                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>
+                                                    <h2 style='font-weight:normal;font-size:24px;margin:0 0 10px'> Thank you for your purchase! </h2>
+                                                   <p style='color:#777;line-height:150%;font-size:16px;margin:0'>Hi " + dtCart.Rows[0]["customer_name"].ToString() + @", we're getting your order ready to be shipped. We will notify you when it has been sent.
+                                                    Your order ID is <b>" + ordPrifix + OrderNumber.ToString() + @".</b>
+                                                    </p>
+                                                    <table style='width:100%;border-spacing:8px;border-collapse:collapse;margin-top:20px'>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;line-height:0em'> &nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>
+                                                                    <table style='border-spacing:8px;margin-top:19px'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;border-radius:4px' align='center' bgcolor='#000000'><a href='https://thestruttstore.com/account/orderhistory.aspx' style='font-size:16px;text-decoration:none;display:block;color:#fff;padding:20px 25px' target='_blank' data=data -=- saferedirecturl='https://thestruttstore.com/account/orderhistory.aspx'> View your order</a></td>
+                                                                            <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;border-radius:4px' align='center' bgcolor='#D0D0D0'><a href='https://thestruttstore.com/' style='font-size:16px;text-decoration:none;display:block;color:#fff;padding:20px 25px' target='_blank' data=data -=- saferedirecturl='https://thestruttstore.com/'> Visit our store</a></td>
+                                                                            <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;border-radius:4px' align='center' bgcolor='#000000'>
+                                                                            <a href='" + invoiceurl + @"' style='font-size:16px;text-decoration:none;display:block;color:#fff;padding:20px 25px' target='_blank'> View Invoice</a></td>
+                                                                             </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>";
+                msgbody += @"<table style='width:100%;border-spacing:0;border-collapse:collapse'>
+                    <tbody>
+                        <tr>
+                            <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;'>
+                                <center>
+                                    <table style='width:560px;text-align:left;border-spacing:0;border-collapse:collapse;margin:0 auto'>
+                                        <tbody>
+                                            <tr>
+                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>
+                                                    <h3 style='font-weight:normal;font-size:20px;margin:0 0 25px'> Order summary </h3>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table style='width:560px;text-align:left;border-spacing:0;border-collapse:collapse;margin:0 auto'>
+                                        <tbody>
+                                            <tr>
+                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>";
+                msgbody += @"<table style='width:100%;border-spacing:0;border-collapse:collapse'>
+
+              <tbody>";
+                for (int i = 0; i < dtCart.Rows.Count; i++)
+                {
+                    double ItemAmount = Convert.ToDouble(dtCart.Rows[i]["quantity"]) * Convert.ToDouble(dtCart.Rows[i]["sale_price"]);
+                    imgThumb = System.Configuration.ConfigurationManager.AppSettings["siteUrl"] + "/images/Product/Thumb/" + dtCart.Rows[i]["thumb_image"].ToString().Replace(" ", "%20");
+                    ProductUrl = System.Configuration.ConfigurationManager.AppSettings["siteUrl"] + @"/productdetails.aspx?proid=" + dtCart.Rows[i]["product_id"].ToString();
+
+
+                    msgbody += @"<tr style ='width:100%;border-top-width:1px;border-top-color:#e5e5e5;border-top-style:solid'>
+                                                                 <td style ='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding-top:15px'>
+                                                                 <table style='border-spacing:0;border-collapse:collapse'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>
+                                                                                    <img src='" + imgThumb + @"' align='left' width='60' height='60' style='margin-right:15px;border-radius:8px;border:1px solid #e5e5e5' class='CToWUd' />
+                                                                                </td>
+                                                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;width:100%'>
+                                                                                    <span style='font-size:16px;font-weight:600;line-height:1.4;color:#555'> " + dtCart.Rows[i]["product_name"].ToString() + @" * " + dtCart.Rows[i]["quantity"].ToString() + @"</span><br />
+                                                                                </td>
+                                                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;white-space:nowrap'>
+                                                                                    <p style ='color:#777;line-height:150%;font-size:16px;margin:0'>
+                                                                        <span style ='font-size:16px'> Rate <strike style ='font-size:16px;color:#555'> Rs. " + (dtCart.Rows[i]["Price"].ToString() + @"</strike></span>
+                                                                    </p>
+                                                                                    <p style ='color:#555;line-height:150%;font-size:16px;font-weight:600;margin:0 0 0 15px' align='right'>
+                                                                                   Rs." + (Convert.ToInt32(dtCart.Rows[i]["quantity"]) * Convert.ToSingle(dtCart.Rows[i]["sale_price"])).ToString() + @"
+                                                                                    </p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>");
+                }
+                msgbody += @"</tbody>
+                                                    </table>";
+
+
+                msgbody += @"<table style ='width:100%;border-spacing:0;border-collapse:collapse;margin-top:20px;border-top-width:2px;border-top-color:#e5e5e5;border-top-style:solid'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding:20px 0 0'>
+                                                                                    <p style ='color:#777;line-height:1.2em;font-size:16px;margin:0'>
+                                                                                        <span style='font-size:16px'>Grand Total</span>
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td  style ='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding:20px 0 0' align='right'>
+                                                                                    <strong style ='font-size:24px;color:#555'>Rs." + TotalPrice.ToString("0.00") + @"</strong>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>";
+
+                msgbody += @"<table>
+                    <tbody>
+                        <tr>
+                            <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding:40px 0'>
+                                <center>
+                                    <table style='width:560px;text-align:left;border-spacing:0;border-collapse:collapse;margin:0 auto'>
+                                        <tbody>
+                                            <tr>
+                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>
+                                                    <h3 style='font-weight:normal;font-size:20px;margin:0 0 25px'> Customer information</h3>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table style ='width:560px;text-align:left;border-spacing:0;border-collapse:collapse;margin:0 auto'>
+                                        <tbody>
+                                            <tr>
+                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>
+                                                     <table style='width:100%;border-spacing:0;border-collapse:collapse'>
+                                                        <tbody>
+                                                           <tr>
+     <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding-bottom:40px;width:50%'>
+         <h4 style='font-weight:500;font-size:16px;color:#555;margin:0 0 5px'> Customer Details</h4>
+         <p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["user_name"].ToString() + @"<br />" + dtCart.Rows[0]["email_id"].ToString() + @"<br /></p>
+         <p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["contact_number"].ToString() + @"<br />" + dtCart.Rows[0]["address"].ToString() + @"<br /></p>
+         <p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["pin_code"].ToString() + @"<br /></p>
+     </td>
+ </tr>
+                                                    </tbody>
+                                                    </table>
+<table style='width:100%;border-spacing:0;border-collapse:collapse'>
+                                                        <tbody>
+                                                           <tr>
+     <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding-bottom:40px;width:50%'>
+         <h4 style='font-weight:500;font-size:16px;color:#555;margin:0 0 5px'> Shipping address</h4>
+         <p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["address"].ToString() + @"<br />" + dtCart.Rows[0]["state"].ToString() + @"<br /></p>
+         <p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["city"].ToString() + @"</p>
+         <p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["pin_code"].ToString() + @"</p>
+     </td>
+     <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding-bottom:40px;width:50%'>
+         <h4 style='font-weight:500;font-size:16px;color:#555;margin:0 0 5px'> Billing address</h4>
+         <p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["address"].ToString() + @"<br />" + dtCart.Rows[0]["state"].ToString() + @"<br /></p>
+<p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["city"].ToString() + @"</p>
+<p style='color:#777;line-height:150%;font-size:16px;margin:0'> " + dtCart.Rows[0]["pin_code"].ToString() + @"</p>
+     </td>
+ </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table style ='width:100%;border-spacing:0;border-collapse:collapse'>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding-bottom:40px;width:50%'>
+                                                                    <h4 style='font-weight:500;font-size:16px;color:#555;margin:0 0 5px'> Shipping method</h4>
+                                                                    <p style ='color:#777;line-height:150%;font-size:16px;margin:0'> Generic Shipping</p>
+                                                                </td>
+                                                                <td style ='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding-bottom:40px;width:50%'>
+                                                                    <h4 style='font-weight:500;font-size:16px;color:#555;margin:0 0 5px'> Payment method</h4>
+                                                                    <p style ='color:#777;line-height:150%;font-size:16px;margin:0'>
+                                                                        <span style ='font-size:16px'> " + PaymentMehtod + @" — <strong style ='font-size:16px;color:#555'> Rs. " + TotalPrice.ToString("0.00") + @"</strong></span>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>";
+
+                msgbody += @"<table>
+                    <tbody>
+                        <tr>
+                            <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;padding:35px 0'>
+                                <center>
+                                    <table style ='width:560px;text-align:left;border-spacing:0;border-collapse:collapse;margin:0 auto'>
+                                        <tbody>
+                                            <tr>
+                                                <td style='font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif'>
+
+                                                    <p style ='color:#999;line-height:150%;font-size:14px;margin:0'> If you have any questions, reply to this email or contact us at<a href='mailto:connect@thestruttstore.com' style='font-size:14px;text-decoration:none;color:#000000' target='_blank'> connect@thestruttstore.com</a></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               </td>
+           </tr>
+       </tbody>
+   </table>";
+                DAL.Utility.sendEmail("STRUTT - Order No " + " " + ordPrifix + OrderNumber.ToString() + " has been placed successfully.", msgbody,
+                    "HURRAY!!", "PURCHASE CONFIRMATION", dtCart.Rows[0]["email_id"].ToString(), ConfigurationManager.AppSettings["emailCc"],
+                    ConfigurationManager.AppSettings["emailBccMarketing"]);
+
+            }
+            return true;
         }
     }
 }

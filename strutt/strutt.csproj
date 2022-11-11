@@ -97,8 +97,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="about-us.aspx" />
-    <Content Include="AboutYourProduct.aspx" />
     <Content Include="account\account.aspx" />
     <Content Include="account\addreview.aspx" />
     <Content Include="account\addresses.aspx" />
@@ -641,12 +639,6 @@
     <Content Include="bin\Razorpay.dll" />
     <Content Include="bin\strutt.dll" />
     <Content Include="bin\strutt.pdb" />
-    <Content Include="blog.aspx" />
-    <Content Include="blogdetail.aspx" />
-    <Content Include="blog_old.aspx" />
-    <Content Include="cart.aspx" />
-    <Content Include="category.aspx" />
-    <Content Include="corporate.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\aos.css" />
@@ -658,15 +650,9 @@
     <Content Include="css\js_composer.min.css" />
     <Content Include="css\public.css" />
     <Content Include="css\style3.css" />
-    <Content Include="custombag.aspx" />
-    <Content Include="customerblog.aspx" />
-    <Content Include="customize_product.aspx" />
     <Content Include="DataServices.asmx" />
-    <Content Include="default1.aspx" />
     <Content Include="ErrorLog\ErrorLog.txt" />
-    <Content Include="ErrorPage.aspx" />
     <Content Include="fonts\font_style.css" />
-    <Content Include="forgotpassword.aspx" />
     <Content Include="images\1_Pic.jpg" />
     <Content Include="images\2_Pic.jpg" />
     <Content Include="images\3_Pic.jpeg" />
@@ -724,9 +710,6 @@
     <Content Include="ccavenue\ccavRequestHandler.aspx" />
     <Content Include="ccavenue\ccavResponseHandler.aspx" />
     <Content Include="ccavenue\dataFrom.htm" />
-    <Content Include="ccavRequestHandler.aspx" />
-    <Content Include="comingsoon.aspx" />
-    <Content Include="contact-us.aspx" />
     <Content Include="Admin\images\true.png" />
     <Content Include="Admin\images\Untitled-2.bmp" />
     <Content Include="Admin\images\update.png" />
@@ -1615,8 +1598,6 @@
     <Content Include="ckeditor\_source\skins\v2\templates.css" />
     <Content Include="ckeditor\_source\skins\v2\toolbar.css" />
     <Content Include="ckeditor\_source\themes\default\theme.js" />
-    <Content Include="default.aspx" />
-    <Content Include="error.aspx" />
     <Content Include="images\arrow.png" />
     <Content Include="images\Banner\slider1_2016923105930.jpg" />
     <Content Include="images\Banner\slider2_2016923105937.jpg" />
@@ -1708,31 +1689,8 @@
     <Content Include="js\slick.min.js" />
     <Content Include="js\theme.js" />
     <Content Include="js\wow.js" />
-    <Content Include="login.aspx" />
-    <Content Include="lookbook.aspx" />
-    <Content Include="PageNotFound.aspx" />
-    <Content Include="post.aspx" />
-    <Content Include="preview_cust_img.aspx" />
-    <Content Include="privacy-policy.aspx" />
-    <Content Include="proceedtopayment.aspx" />
-    <Content Include="productdetails.aspx" />
-    <Content Include="resetpassword.aspx" />
-    <Content Include="ResponseHandler.aspx" />
-    <Content Include="return-policy.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="review.aspx" />
-    <Content Include="reviewcustomer.aspx" />
-    <Content Include="sitemap.aspx" />
-    <Content Include="success_Xpress.aspx" />
-    <Content Include="success.aspx" />
-    <Content Include="terms-conditions.aspx" />
-    <Content Include="feedback.aspx" />
-    <Content Include="test.aspx" />
-    <Content Include="testEmail.aspx" />
-    <Content Include="TestXpressLean.aspx" />
-    <Content Include="test_customize_product.aspx" />
     <Content Include="uc\uc-autosearch.ascx" />
-    <Content Include="viewcart.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1742,23 +1700,8 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="wishlist.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="about-us.aspx.cs">
-      <DependentUpon>about-us.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="about-us.aspx.designer.cs">
-      <DependentUpon>about-us.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AboutYourProduct.aspx.cs">
-      <DependentUpon>AboutYourProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AboutYourProduct.aspx.designer.cs">
-      <DependentUpon>AboutYourProduct.aspx</DependentUpon>
-    </Compile>
     <Compile Include="account\account.aspx.cs">
       <DependentUpon>account.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2114,41 +2057,6 @@
       <DependentUpon>auto-webservice.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="blog.aspx.cs">
-      <DependentUpon>blog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="blog.aspx.designer.cs">
-      <DependentUpon>blog.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="blogdetail.aspx.cs">
-      <DependentUpon>blogdetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="blogdetail.aspx.designer.cs">
-      <DependentUpon>blogdetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="blog_old.aspx.cs">
-      <DependentUpon>blog_old.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="blog_old.aspx.designer.cs">
-      <DependentUpon>blog_old.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="cart.aspx.cs">
-      <DependentUpon>cart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="cart.aspx.designer.cs">
-      <DependentUpon>cart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="category.aspx.cs">
-      <DependentUpon>category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="category.aspx.designer.cs">
-      <DependentUpon>category.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ccavenue\ccavRequestHandler.aspx.cs">
       <DependentUpon>ccavRequestHandler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2163,111 +2071,13 @@
     <Compile Include="ccavenue\ccavResponseHandler.aspx.designer.cs">
       <DependentUpon>ccavResponseHandler.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ccavRequestHandler.aspx.cs">
-      <DependentUpon>ccavRequestHandler.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ccavRequestHandler.aspx.designer.cs">
-      <DependentUpon>ccavRequestHandler.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="comingsoon.aspx.cs">
-      <DependentUpon>comingsoon.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="comingsoon.aspx.designer.cs">
-      <DependentUpon>comingsoon.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Common.cs" />
-    <Compile Include="contact-us.aspx.cs">
-      <DependentUpon>contact-us.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="contact-us.aspx.designer.cs">
-      <DependentUpon>contact-us.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="corporate.aspx.cs">
-      <DependentUpon>corporate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="corporate.aspx.designer.cs">
-      <DependentUpon>corporate.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="custombag.aspx.cs">
-      <DependentUpon>custombag.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="custombag.aspx.designer.cs">
-      <DependentUpon>custombag.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="customerblog.aspx.cs">
-      <DependentUpon>customerblog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="customerblog.aspx.designer.cs">
-      <DependentUpon>customerblog.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="customize_product.aspx.cs">
-      <DependentUpon>customize_product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="customize_product.aspx.designer.cs">
-      <DependentUpon>customize_product.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DataServices.asmx.cs">
       <DependentUpon>DataServices.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="default1.aspx.cs">
-      <DependentUpon>default1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="default1.aspx.designer.cs">
-      <DependentUpon>default1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="error.aspx.cs">
-      <DependentUpon>error.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="error.aspx.designer.cs">
-      <DependentUpon>error.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ErrorPage.aspx.cs">
-      <DependentUpon>ErrorPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ErrorPage.aspx.designer.cs">
-      <DependentUpon>ErrorPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="forgotpassword.aspx.cs">
-      <DependentUpon>forgotpassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="forgotpassword.aspx.designer.cs">
-      <DependentUpon>forgotpassword.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="lookbook.aspx.cs">
-      <DependentUpon>lookbook.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="lookbook.aspx.designer.cs">
-      <DependentUpon>lookbook.aspx</DependentUpon>
     </Compile>
     <Compile Include="master\main.Master.cs">
       <DependentUpon>main.Master</DependentUpon>
@@ -2276,168 +2086,13 @@
     <Compile Include="master\main.Master.designer.cs">
       <DependentUpon>main.Master</DependentUpon>
     </Compile>
-    <Compile Include="PageNotFound.aspx.cs">
-      <DependentUpon>PageNotFound.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PageNotFound.aspx.designer.cs">
-      <DependentUpon>PageNotFound.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="post.aspx.cs">
-      <DependentUpon>post.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="post.aspx.designer.cs">
-      <DependentUpon>post.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="preview_cust_img.aspx.cs">
-      <DependentUpon>preview_cust_img.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="preview_cust_img.aspx.designer.cs">
-      <DependentUpon>preview_cust_img.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="privacy-policy.aspx.cs">
-      <DependentUpon>privacy-policy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="privacy-policy.aspx.designer.cs">
-      <DependentUpon>privacy-policy.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="proceedtopayment.aspx.cs">
-      <DependentUpon>proceedtopayment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="proceedtopayment.aspx.designer.cs">
-      <DependentUpon>proceedtopayment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="productdetails.aspx.cs">
-      <DependentUpon>productdetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="productdetails.aspx.designer.cs">
-      <DependentUpon>productdetails.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="resetpassword.aspx.cs">
-      <DependentUpon>resetpassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="resetpassword.aspx.designer.cs">
-      <DependentUpon>resetpassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ResponseHandler.aspx.cs">
-      <DependentUpon>ResponseHandler.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ResponseHandler.aspx.designer.cs">
-      <DependentUpon>ResponseHandler.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="return-policy.aspx.cs">
-      <DependentUpon>return-policy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="return-policy.aspx.designer.cs">
-      <DependentUpon>return-policy.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="review.aspx.cs">
-      <DependentUpon>review.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="review.aspx.designer.cs">
-      <DependentUpon>review.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="reviewcustomer.aspx.cs">
-      <DependentUpon>reviewcustomer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="reviewcustomer.aspx.designer.cs">
-      <DependentUpon>reviewcustomer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="sitemap.aspx.cs">
-      <DependentUpon>sitemap.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="sitemap.aspx.designer.cs">
-      <DependentUpon>sitemap.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="success_Xpress.aspx.cs">
-      <DependentUpon>success_Xpress.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="success_Xpress.aspx.designer.cs">
-      <DependentUpon>success_Xpress.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="success.aspx.cs">
-      <DependentUpon>success.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="success.aspx.designer.cs">
-      <DependentUpon>success.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="terms-conditions.aspx.cs">
-      <DependentUpon>terms-conditions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="terms-conditions.aspx.designer.cs">
-      <DependentUpon>terms-conditions.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="feedback.aspx.cs">
-      <DependentUpon>feedback.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="feedback.aspx.designer.cs">
-      <DependentUpon>feedback.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="testEmail.aspx.cs">
-      <DependentUpon>testEmail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testEmail.aspx.designer.cs">
-      <DependentUpon>testEmail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TestXpressLean.aspx.cs">
-      <DependentUpon>TestXpressLean.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestXpressLean.aspx.designer.cs">
-      <DependentUpon>TestXpressLean.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="test_customize_product.aspx.cs">
-      <DependentUpon>test_customize_product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test_customize_product.aspx.designer.cs">
-      <DependentUpon>test_customize_product.aspx</DependentUpon>
-    </Compile>
     <Compile Include="uc\uc-autosearch.ascx.cs">
       <DependentUpon>uc-autosearch.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="uc\uc-autosearch.ascx.designer.cs">
       <DependentUpon>uc-autosearch.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UtilityLog.cs" />
-    <Compile Include="viewcart.aspx.cs">
-      <DependentUpon>viewcart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="viewcart.aspx.designer.cs">
-      <DependentUpon>viewcart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="wishlist.aspx.cs">
-      <DependentUpon>wishlist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="wishlist.aspx.designer.cs">
-      <DependentUpon>wishlist.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -2545,7 +2200,6 @@
     <None Include="ckeditor\_samples\php\replaceall.php" />
     <None Include="ckeditor\_samples\php\standalone.php" />
     <None Include="ckeditor\_samples\sample_posteddata.php" />
-    <Content Include="ClassDiagram1.cd" />
     <Content Include="master\main.Master" />
     <Content Include="packages.config" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
