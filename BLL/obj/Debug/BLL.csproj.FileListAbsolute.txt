@@ -332,3 +332,14 @@ D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStr
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\BLL\obj\Debug\BLL.dll
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\BLL\obj\Debug\BLL.pdb
+D:\Priyanka\Project\booksworld\BLL\bin\Debug\BLL.dll
+D:\Priyanka\Project\booksworld\BLL\bin\Debug\BLL.pdb
+D:\Priyanka\Project\booksworld\BLL\bin\Debug\BusinessEntities.dll
+D:\Priyanka\Project\booksworld\BLL\bin\Debug\DAL.dll
+D:\Priyanka\Project\booksworld\BLL\bin\Debug\BusinessEntities.pdb
+D:\Priyanka\Project\booksworld\BLL\bin\Debug\DAL.pdb
+D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.dll
+D:\Priyanka\Project\booksworld\BLL\obj\Debug\BLL.pdb

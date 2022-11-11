@@ -260,3 +260,12 @@ D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStr
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\DAL\obj\Debug\DAL.dll
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\DAL\obj\Debug\DAL.pdb
+D:\Priyanka\Project\booksworld\DAL\bin\Debug\DAL.dll
+D:\Priyanka\Project\booksworld\DAL\bin\Debug\DAL.pdb
+D:\Priyanka\Project\booksworld\DAL\bin\Debug\BusinessEntities.dll
+D:\Priyanka\Project\booksworld\DAL\bin\Debug\BusinessEntities.pdb
+D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.dll
+D:\Priyanka\Project\booksworld\DAL\obj\Debug\DAL.pdb
