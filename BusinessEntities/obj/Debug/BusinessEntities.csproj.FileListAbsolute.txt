@@ -110,3 +110,9 @@ D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStr
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\BusinessEntities\obj\Debug\BusinessEntities.csproj.CoreCompileInputs.cache
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\BusinessEntities\obj\Debug\BusinessEntities.dll
 D:\Application\car\TheStrutt_27_Oct21\TheStrutt_5Dec21\TheStrutt_16_Oct21\TheStrutt\BusinessEntities\obj\Debug\BusinessEntities.pdb
+D:\Priyanka\Project\booksworld\BusinessEntities\bin\Debug\BusinessEntities.dll
+D:\Priyanka\Project\booksworld\BusinessEntities\bin\Debug\BusinessEntities.pdb
+D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.csproj.AssemblyReference.cache
+D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.csproj.CoreCompileInputs.cache
+D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.dll
+D:\Priyanka\Project\booksworld\BusinessEntities\obj\Debug\BusinessEntities.pdb

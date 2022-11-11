@@ -290,3 +290,7 @@ D:\Application\car\TheStrutt_13Feb22\TheStrutt\strutt\obj\Debug\strutt.csproj.Co
 D:\Application\car\TheStrutt_13Feb22\TheStrutt\strutt\obj\Debug\strutt.csproj.CopyComplete
 D:\Application\car\TheStrutt_13Feb22\TheStrutt\strutt\obj\Debug\strutt.dll
 D:\Application\car\TheStrutt_13Feb22\TheStrutt\strutt\obj\Debug\strutt.pdb
+D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.csproj.AssemblyReference.cache
+D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.csproj.CoreCompileInputs.cache
+D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.dll
+D:\Priyanka\Project\booksworld\strutt\obj\Debug\strutt.pdb
